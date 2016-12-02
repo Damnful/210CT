@@ -1,4 +1,17 @@
 '''
+PERFECT_SQUARE(number)
+	total ← 1
+	counter ← 1
+	WHILE number ← total
+		total ← counter * counter
+		counter ← counter + 1
+	IF total > number
+		counter ← counter - 2
+		total ← counter * counter
+	RETURN total
+'''
+
+'''
 Calculate highest square number, if n is not square, then round
 down square root of input to nearest whole, then square it.
 
