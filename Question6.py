@@ -1,3 +1,13 @@
+'''
+SENTENCE_REVERSE (sentence)
+	reversedsentence ← [“ ”]
+	splitsentence  ← split(sentence)
+	FOR each in reversed(splitsentence)
+		add to reversedsentence
+	RETURN reversedsentence
+'''
+
+
 def split_sentence(sentence):
     
     reversedSentence = [] 
