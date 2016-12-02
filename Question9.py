@@ -1,3 +1,27 @@
+'''
+BINARY_SEARCH(sortedlist,target1,target2)
+	WHILE target1 != target2
+		first ← 0
+		last ← sortedlist(length) - 1
+		found ← false
+		WHILE first <= last and found ← false
+			mid ← (first + last) / 2
+			IF sortedlist[mid] ← target1
+				found ← true
+			ELSE
+				IF target1 < sortedlist[mid]
+					last ← mid - 1
+				ELSE
+					first ← mid + 1
+		IF found
+			return true
+		ELSE
+			IF target1 ← target2
+				return false
+			ELSE
+				target1 ← target1 + 1
+'''
+
 def binary_search(array,target1,target2):
     print("Search in array for number within interval: " + str(target1) + " - " + str(target2))
     print(array)
