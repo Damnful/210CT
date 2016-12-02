@@ -1,0 +1,26 @@
+MATRIX_ADDITION(MatrixA, MatrixB)       // O(n)
+	IF MatrixA(size) != MatrixB(size)
+		RETURN False
+	FOR each rowval in MatrixA
+		FOR each colval in MatrixA
+			MatrixC[rowval][colval] ← MatrixB[rowval][colval] + MatrixA[rowval][colval]
+
+MATRIX_SUBTRACTION(MatrixA, MatrixB) // O(n)
+IF MatrixA(size) <> MatrixB(size)
+	RETURN False
+	FOR each value in MatrixA
+		FOR each colval in MatrixA
+			MatrixC[rowval][colval] ← MatrixB[rowval][colval] - MatrixA[rowval][colval]
+
+
+MATRIX_MULT(MatrixA, MatrixB) // O(n^3)
+	IF MatrixA(norows) <> MatrixB(nocolumns)
+		RETURN False
+	ELSE
+		MatrixC(size) = MatrixA(nocolumns) * MatrixB(norows)
+	FOR each row in MatrixA
+		FOR each column in MatrixB
+			FOR each row in MatrixA and MatrixB
+				MatrixC[rowval][colval]  ← (MatrixA[rowval][colval] * MatrixB[rowval][colval])
+
+A = (MATRIX_SUBTRACTION(MATRIX_MULT(B,C), MATRIX_ADDITION(B,C))
